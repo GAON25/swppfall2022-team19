@@ -13,6 +13,7 @@ import Home from './containers/Home/Home'
 import Category from './containers/Category/Category'
 import Category1 from './containers/Category/Category1'
 import ProductDetailPageSnack from "./containers/ProductDetailPage/ProductDetailPageSnack";
+import MyPage from "./containers/MyPage/MyPage";
 
 // 
 function App() {
@@ -20,7 +21,7 @@ function App() {
     <div className="appTotal">
       <BrowserRouter>
         <Routes>
-          <Route path ="/"element={<Navigate replace to={"/login"} />}  />
+          <Route path="/" element={<Navigate replace to={"/login"} />} />
           <Route path='/login' element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path='/signup' element={<SignupSurvey />} />
@@ -29,6 +30,7 @@ function App() {
           {/* <Route path="/productList/:companyID" element={<Category />} /> */}
           <Route path="/productList/1" element={<Category />} />
           <Route path="/productList/0" element={<Category1 />} />
+          <Route path="/myPage" element={<MyPage />} />
         </Routes>
       </BrowserRouter>
     </div>

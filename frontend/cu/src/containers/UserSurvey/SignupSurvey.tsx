@@ -30,7 +30,7 @@ const SignupSurvey = () => {
     const [question, setQuestion] = useState<number>(0);
     const [submitted, setSubmitted] = useState<boolean>(false);
     const dispatch = useDispatch<AppDispatch>();
-    
+
 
     const logo = require('../../Categoryicon/Logo.png')
 
@@ -108,7 +108,8 @@ const SignupSurvey = () => {
 
 
     if (submitted) {
-        return <Navigate to="/login" />;
+        return <div> 회원가입이 완료되긴 했음! </div> // check
+        //return <Navigate to="/login" />; // check
     } else {
         return (
             <div className="signUpAndSurvey">
@@ -133,7 +134,7 @@ const SignupSurvey = () => {
                 <div className="SurveyBox">
                     <div className="SelectBox">
                         <div className="introBox">
-                        <img className = "CenterLogo" src= {logo} alt="homeLogo" />
+                            <img className="CenterLogo" src={logo} alt="homeLogo" />
 
                             <h4>사용자 정보를 입력하고 맞춤화 된 제품을 추천받자!</h4>
                         </div>
